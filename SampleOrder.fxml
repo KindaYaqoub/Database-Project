@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.OrderController1">
+	<center>
+		<AnchorPane prefHeight="745.0" prefWidth="1276.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<TableView fx:id="tableView" layoutX="9.0" layoutY="49.0"
+					prefHeight="378.0" prefWidth="823.0"
+					style="-fx-background-color: tan; -fx-border-color: brown;">
+					<columns>
+						<TableColumn fx:id="orderIdColumn" prefWidth="75.0"
+							text="Order ID" />
+						<TableColumn fx:id="branchIdColumn" prefWidth="82.0"
+							text="Branch ID" />
+						<TableColumn fx:id="customerIdColumn" prefWidth="85.0"
+							text="Customer ID" />
+						<TableColumn fx:id="paymentIdColumn" prefWidth="75.0"
+							text="Payment ID" />
+						<TableColumn fx:id="tableIdColumn" prefWidth="96.0"
+							text="Table ID" />
+						<TableColumn fx:id="deliveryIdColumn" prefWidth="94.0"
+							text="Delivery ID" />
+						<TableColumn fx:id="orderDateColumn" prefWidth="117.0"
+							text="Order Date" />
+						<TableColumn fx:id="orderTypeColumn" prefWidth="99.0"
+							text="Order Type" />
+						<TableColumn fx:id="priceColumn" prefWidth="98.0"
+							text="Price" />
+					</columns>
+					<effect>
+						<ColorAdjust brightness="0.24" contrast="-0.11"
+							hue="0.04" saturation="-0.22" />
+					</effect>
+				</TableView>
+				<Label layoutX="14.0" layoutY="14.0" prefHeight="18.0"
+					prefWidth="236.0" text="Order Manager" textFill="#804a4a">
+					<font>
+						<Font name="Bauhaus 93" size="31.0" />
+					</font>
+				</Label>
+				<TextField fx:id="orderIdField" layoutX="15.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="134.0"
+					promptText="Add order ID" style="-fx-border-color: brown;" />
+				<TextField fx:id="priceField" layoutX="14.0"
+					layoutY="520.0" prefHeight="27.0" prefWidth="136.0"
+					promptText="Add Price" style="-fx-border-color: brown;" />
+				<DatePicker fx:id="orderDatePicker" layoutX="16.0"
+					layoutY="573.0" prefHeight="33.0" prefWidth="134.0"
+					style="-fx-border-color: brown;" />
+				<CheckBox fx:id="inRestaurantCheckBox" layoutX="13.0"
+					layoutY="631.0" text="In Restaurant" textFill="#804a4a">
+					<font>
+						<Font name="System Bold Italic" size="12.0" />
+					</font>
+				</CheckBox>
+				<CheckBox fx:id="takeAwayCheckBox" layoutX="13.0"
+					layoutY="654.0" text="TakeAway" textFill="#804a4a">
+					<font>
+						<Font name="System Bold Italic" size="12.0" />
+					</font>
+				</CheckBox>
+				<Button layoutX="524.0" layoutY="636.0"
+					onAction="#handleViewButtonAction" prefHeight="27.0"
+					prefWidth="80.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="View" />
+				<Button layoutX="350.0" layoutY="636.0"
+					onAction="#handleInsert" prefHeight="27.0" prefWidth="80.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Insert" />
+				<Button layoutX="350.0" layoutY="673.0"
+					onAction="#handleDeleteOrder" prefHeight="27.0" prefWidth="80.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Delete" />
+				<Button layoutX="437.0" layoutY="636.0" prefHeight="27.0"
+					prefWidth="80.0" onAction="#handleUpdateOrder"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Update" />
+				<Label layoutX="421.0" layoutY="590.0" prefHeight="33.0"
+					prefWidth="158.0" text="Operations" textFill="#dca8a8">
+					<font>
+						<Font name="Bauhaus 93" size="22.0" />
+					</font>
+				</Label>
+				<Button layoutX="524.0" layoutY="673.0" prefHeight="27.0" prefWidth="80.0"
+        onAction="#handleBackButtonAction" style="-fx-border-color: brown; -fx-background-color: tan;" text="Back" />
+
+				<CheckBox fx:id="deliveryCheckBox" layoutX="13.0"
+					layoutY="678.0" text="Delivery" textFill="#804a4a">
+					<font>
+						<Font name="System Bold Italic" size="12.0" />
+					</font>
+				</CheckBox>
+				<ImageView fitHeight="745.0" fitWidth="375.0"
+					layoutX="901.0">
+					<image>
+						<Image
+							url="@../../../Downloads/WhatsApp%20Image%202024-12-29%20at%206.15.47%20AM.jpeg" />
+					</image>
+				</ImageView>
+				<Label layoutX="16.0" layoutY="441.0" prefHeight="33.0"
+					prefWidth="132.0" text="Enter Order ID" textFill="#dca8a8">
+					<font>
+						<Font name="Times New Roman Bold" size="16.0" />
+					</font>
+				</Label>
+				<Label layoutX="16.0" layoutY="494.0" prefHeight="33.0"
+					prefWidth="132.0" text="Enter Price" textFill="#dca8a8">
+					<font>
+						<Font name="Times New Roman Bold" size="16.0" />
+					</font>
+				</Label>
+				<Button layoutX="155.0" layoutY="520.0" prefHeight="27.0"
+					prefWidth="133.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Add New Branch ..." onAction="#handleAddBranch" />
+				<Button layoutX="296.0" layoutY="520.0" prefHeight="27.0"
+					prefWidth="135.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Add New Customer ..." onAction="#handleAddCustomer" />
+				<Button layoutX="436.0" layoutY="520.0" prefHeight="27.0"
+					prefWidth="128.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Add New Payment ..." onAction="#handleAddPayment" />
+				<Button layoutX="570.0" layoutY="520.0" prefHeight="27.0"
+					prefWidth="123.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Add New Table ..." onAction="#handleAddTable" />
+				<Button layoutX="704.0" layoutY="520.0" prefHeight="27.0"
+					prefWidth="123.0"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Add New Delivery..." onAction="#handleAddDelivery" />
+				<ComboBox fx:id="branchComboBox" layoutX="155.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="133.0"
+					promptText="Branches " style="-fx-border-color: brown;" />
+				<ComboBox fx:id="CustomerComboBox" layoutX="295.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="135.0"
+					promptText="Customers " style="-fx-border-color: brown;" />
+				<ComboBox fx:id="PaymentComboBox" layoutX="437.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="127.0"
+					promptText="Payments" style="-fx-border-color: brown;" />
+				<ComboBox fx:id="TableComboBox" layoutX="568.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="127.0"
+					promptText="Tables" style="-fx-border-color: brown;" />
+				<ComboBox fx:id="DeliveryComboBox" layoutX="702.0"
+					layoutY="467.0" prefHeight="27.0" prefWidth="127.0"
+					promptText="Deliveries" style="-fx-border-color: brown;" />
+				<Label layoutX="17.0" layoutY="547.0" prefHeight="33.0"
+					prefWidth="132.0" text="Enter Order Date" textFill="#dca8a8">
+					<font>
+						<Font name="Times New Roman Bold" size="16.0" />
+					</font>
+				</Label>
+				<Label layoutX="15.0" layoutY="606.0" prefHeight="33.0"
+					prefWidth="132.0" text="Enter Order Type" textFill="#dca8a8">
+					<font>
+						<Font name="Times New Roman Bold" size="16.0" />
+					</font>
+				</Label>
+				<Button layoutX="437.0" layoutY="673.0" prefHeight="27.0"
+					prefWidth="80.0" onAction="#handleSearchOrder"
+					style="-fx-border-color: brown; -fx-background-color: tan;"
+					text="Search" />
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

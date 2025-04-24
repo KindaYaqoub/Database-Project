@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="application.StatController2" spacing="10"
+      alignment="CENTER">
+
+    <!-- PieChart to display total sales per branch -->
+    <PieChart fx:id="pieChart" prefWidth="500" prefHeight="500" />
+
+    <!-- VBox to display branch details dynamically -->
+    <VBox fx:id="detailsVBox" spacing="5" alignment="CENTER" />
+
+</VBox>

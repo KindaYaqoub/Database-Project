@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BranchStat" spacing="20" alignment="CENTER">
+    
+    <!-- Label for Chart Title -->
+    <Label fx:id="chartTitle" text="Branch with the Highest Number of Customers" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+
+    <!-- PieChart for displaying branch data -->
+    <PieChart fx:id="pieChart" prefHeight="300" prefWidth="300">
+        <!-- Removed legendVisible line -->
+    </PieChart>
+
+    <!-- VBox for details display -->
+    <VBox fx:id="detailsVBox" spacing="10" alignment="CENTER">
+        <!-- Labels for branch details will be added dynamically here -->
+    </VBox>
+
+</VBox>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CoustomerController">
+   <bottom>
+		<AnchorPane id="adressComboBox" prefHeight="622.0" prefWidth="1227.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<TableView fx:id="tableView" layoutX="20.0" layoutY="74.0" prefHeight="533.0" prefWidth="323.0" style="-fx-background-color: tan; -fx-border-color: Black;">
+					<columns>
+						<TableColumn fx:id="columnCustomerId" prefWidth="75.0" text="Customer ID" />
+						<TableColumn fx:id="columnCustomerName" prefWidth="113.5999755859375" text="Customer Name" />
+						<TableColumn fx:id="columnAddressId" prefWidth="60.00004577636719" text="Adress ID" />
+						<TableColumn fx:id="columnPhone" prefWidth="72.79998779296875" text="Phone" />
+
+					</columns>
+					<effect>
+						<ColorAdjust brightness="0.19" contrast="0.07" hue="0.04" saturation="-0.32" />
+					</effect>
+				</TableView>
+				<Label layoutX="20.0" layoutY="26.0" prefHeight="38.0" prefWidth="306.0" text="Customer Manager" textFill="#a46868">
+					<font>
+						<Font name="Bauhaus 93" size="32.0" />
+					</font>
+				</Label>
+				<Label layoutX="399.0" layoutY="174.0" text="Add Address " textFill="#804a4a">
+					<font>
+						<Font name="Times New Roman" size="14.0" />
+					</font>
+				</Label>
+				<TextField fx:id="customerIdField" layoutX="380.0" layoutY="114.0" promptText="Enter Customer ID" style="-fx-border-color: black;" />
+				<Label layoutX="596.0" layoutY="74.0" text="Enter Customer Name" textFill="#9e6d6d">
+					<font>
+						<Font name="Times New Roman" size="14.0" />
+					</font>
+				</Label>
+				<TextField fx:id="customerNameField" layoutX="584.0" layoutY="114.0" promptText="Enter Customer Name" style="-fx-border-color: black;" />
+				<Label layoutX="397.0" layoutY="74.0" text="Enter Customer ID" textFill="#804a4a">
+					<font>
+						<Font name="Times New Roman" size="14.0" />
+					</font>
+				</Label>
+				<Label layoutX="596.0" layoutY="174.0" text="Add Phone" textFill="#804a4a">
+					<font>
+						<Font name="Times New Roman" size="14.0" />
+					</font>
+				</Label>
+				<TextField fx:id="phoneField" layoutX="584.0" layoutY="200.0" promptText="Enter Phone" style="-fx-border-color: black;" />
+				<Button layoutX="468.0" layoutY="400.0" mnemonicParsing="false" onAction="#insertCustomer" prefHeight="34.0" prefWidth="72.0" style="-fx-border-color: black; -fx-background-color: tan;" text="Insert" textFill="#804a4a">
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<Button layoutX="584.0" layoutY="400.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="35.0" prefWidth="72.0" style="-fx-border-color: black; -fx-background-color: tan;" text="Delete" textFill="#804a4a">
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<Button layoutX="584.0" layoutY="462.0" mnemonicParsing="false" onAction="#updateCustomer" prefHeight="32.0" prefWidth="72.0" style="-fx-border-color: black; -fx-background-color: tan;" text="Update" textFill="#804a4a">
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<Button layoutX="468.0" layoutY="462.0" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="34.0" prefWidth="72.0" style="-fx-border-color: black; -fx-background-color: tan;" text="Search" textFill="#804a4a">
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<Label layoutX="499.0" layoutY="330.0" prefHeight="31.0" prefWidth="171.0" text="Operations " textFill="#a16b6b">
+					<font>
+						<Font name="Bauhaus 93" size="23.0" />
+					</font>
+				</Label>
+				<Button layoutX="468.0" layoutY="523.0" mnemonicParsing="false" onAction="#viewCustomers" prefHeight="33.0" prefWidth="72.0" style="-fx-border-color: black; -fx-background-color: tan;" text="view" textFill="#804a4a">
+
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<Button layoutX="582.0" layoutY="523.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: tan; -fx-border-color: black;" text="Back">
+
+				<effect>
+					<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+				</effect>
+			</Button>
+				<ComboBox fx:id="addressComboBox" layoutX="381.0" layoutY="199.0" prefWidth="150.0" promptText="Addresses..." style="-fx-border-color: black; -fx-background-color: white;" />
+				<Button layoutX="381.0" layoutY="248.0" mnemonicParsing="false" onAction="#addNewAddress" prefHeight="34.0" prefWidth="150.0" style="-fx-border-color: black; -fx-background-color: tan;" text="Add New Addresses..." textFill="#804a4a">
+					<effect>
+						<ColorAdjust brightness="0.3" hue="0.06" saturation="-0.15" />
+					</effect>
+				</Button>
+				<ImageView fitHeight="287.0" fitWidth="423.0" layoutX="796.0" layoutY="179.0">
+					<image>
+						<Image url="@../../../Downloads/man-and-woman-sitting-at-table-in-cafe-drinking-vector-34654299.jpg" />
+					</image>
+				</ImageView>
+            <ImageView fitHeight="347.0" fitWidth="356.0" layoutX="779.0" layoutY="102.0">
+               <image>
+                  <Image url="@../../../../OneDrive/Desktop/database%20projpic/Customer.jpg" />
+               </image>
+            </ImageView>
+			</children>
+		</AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TwoBranch" spacing="10" alignment="CENTER">
+    <!-- Label to display the title -->
+    <Label text="Customers who ordered from both Branch 1 and Branch 2" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    
+    <!-- PieChart for displaying the data -->
+    <PieChart fx:id="pieChart" />
+
+    <!-- VBox to hold the customer details (labels showing customer names) -->
+    <VBox fx:id="detailsVBox" spacing="5" alignment="CENTER"/>
+</VBox>

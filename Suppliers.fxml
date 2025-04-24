@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SuppliersController">
+	<center>
+		<AnchorPane prefHeight="771.0" prefWidth="998.0"
+			style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<TableView fx:id="tableView" layoutX="14.0"
+					layoutY="283.0" prefHeight="477.0" prefWidth="514.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;">
+					<columns>
+						<TableColumn fx:id="supplierIdColumn"
+							prefWidth="109.59997177124023" text="Supplier ID" />
+						<TableColumn fx:id="nameColumn"
+							prefWidth="87.20001220703125" text="Name " />
+						<TableColumn fx:id="contactInfoColumn"
+							prefWidth="84.80003356933594" text="ContactInfo" />
+						<TableColumn fx:id="addressColumn"
+							prefWidth="110.4000244140625" text="Address" />
+						<TableColumn fx:id="informationColumn"
+							prefWidth="121.5999755859375" text="Information" />
+
+					</columns>
+					<effect>
+						<ColorAdjust brightness="0.28" />
+					</effect>
+				</TableView>
+				<Label layoutX="14.0" layoutY="225.0" prefHeight="38.0"
+					prefWidth="294.0" text="Suppliers Manager " textFill="#6a8e0d">
+					<font>
+						<Font name="Bauhaus 93" size="32.0" />
+					</font>
+				</Label>
+				<Label layoutX="687.0" layoutY="504.0" prefHeight="28.0"
+					prefWidth="159.0" text="Operations" textFill="#6a8e0d">
+					<font>
+						<Font name="Bauhaus 93" size="24.0" />
+					</font>
+				</Label>
+				<Label layoutX="550.0" layoutY="287.0"
+					text="Enter Supplier ID" textFill="#6a8e0d">
+					<font>
+						<Font name="Times New Roman Bold" size="12.0" />
+					</font>
+				</Label>
+				<TextField fx:id="supplierIdField" layoutX="549.0"
+					layoutY="325.0" prefHeight="26.0" prefWidth="115.0"
+					promptText="Add Supplier ID" style="-fx-border-color: #6A8E0D;" />
+
+				<Label layoutX="722.0" layoutY="285.0" prefHeight="18.0"
+					prefWidth="30.0" text="Name" textFill="#6a8e0d">
+					<font>
+						<Font name="Times New Roman Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label layoutX="586.0" layoutY="392.0" text="Information"
+					textFill="#6a8e0d">
+					<font>
+						<Font name="Times New Roman Bold" size="12.0" />
+					</font>
+				</Label>
+				<TextField fx:id="nameField" layoutX="709.0"
+					layoutY="325.0" prefHeight="27.0" prefWidth="95.0"
+					promptText="Name" style="-fx-border-color: #6A8E0D;" />
+
+				<TextField fx:id="contactInfoField" layoutX="840.0"
+					layoutY="325.0" prefHeight="27.0" prefWidth="101.0"
+					promptText="ContactInfo" style="-fx-border-color: #6A8E0D;" />
+
+				<TextField fx:id="informationField" layoutX="563.0"
+					layoutY="444.0" prefHeight="27.0" prefWidth="159.0"
+					promptText="Add Information" style="-fx-border-color: #6A8E0D;" />
+
+				<Label layoutX="847.0" layoutY="287.0" text="ContactInfo"
+					textFill="#6a8e0d">
+					<font>
+						<Font name="Times New Roman Bold" size="12.0" />
+					</font>
+				</Label>
+				<Button fx:id="insertButton" layoutX="562.0" layoutY="576.0"
+					mnemonicParsing="false" onAction="#insertSupplier"
+					prefHeight="27.0" prefWidth="90.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Insert">
+
+
+
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+				<Button fx:id="deleteButton" layoutX="709.0" layoutY="576.0"
+					mnemonicParsing="false" onAction="#deleteSupplier"
+					prefHeight="27.0" prefWidth="95.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Delete">
+
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+				<Button fx:id="updateButton" layoutX="868.0" layoutY="576.0"
+					mnemonicParsing="false" onAction="#updateSupplier"
+					prefHeight="27.0" prefWidth="81.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Update">
+
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+				<Button fx:id="searchButton" layoutX="559.0" layoutY="644.0"
+					mnemonicParsing="false" onAction="#handleSearchButton"
+					prefHeight="27.0" prefWidth="91.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Search">
+
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+				<ImageView fitHeight="192.0" fitWidth="783.0"
+					layoutX="10.0">
+					<image>
+						<Image
+							url="@../../../../OneDrive/Desktop/database%20projpic/Suppliers.jpg" />
+					</image>
+				</ImageView>
+				<Button fx:id="viewButton" layoutX="709.0" layoutY="644.0"
+					mnemonicParsing="false" onAction="#loadSuppliersFromDatabase"
+					prefHeight="27.0" prefWidth="95.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="View">
+
+
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+				<Button fx:id="backButton" layoutX="865.0" layoutY="644.0"
+					mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Back" onAction="#handleBackButtonAction" >
+
+				<effect>
+					<ColorAdjust brightness="0.17" />
+				</effect>
+			</Button>
+				<ComboBox fx:id="addressComboBox" layoutX="817.0"
+					layoutY="386.0" prefHeight="27.0" prefWidth="146.0"
+					promptText="Address" style="-fx-border-color: #6A8E0D;" />
+				<Button fx:id="addNewAddress" layoutX="811.0" layoutY="444.0"
+					mnemonicParsing="false" onAction="#addNewAddress" prefHeight="27.0"
+					prefWidth="158.0"
+					style="-fx-background-color: #6A8E0D; -fx-border-color: black;"
+					text="Add New Address">
+					<effect>
+						<ColorAdjust brightness="0.17" />
+					</effect>
+				</Button>
+
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

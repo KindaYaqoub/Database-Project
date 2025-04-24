@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="914.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+
+	<children>
+		<TableView fx:id="tableView" layoutX="14.0" layoutY="286.0" prefHeight="430.0" prefWidth="305.0" style="-fx-background-color: tan; -fx-border-color: brown;">
+			<columns>
+				<TableColumn fx:id="tableIdColumn" prefWidth="75.0" text="Table ID" />
+				<TableColumn fx:id="capacityColumn" prefWidth="75.0" text="Capacity" />
+				<TableColumn fx:id="branchIdColumn" prefWidth="75.0" text="Branch ID" />
+			</columns>
+			<cursor>
+				<Cursor fx:constant="HAND" />
+			</cursor>
+			<effect>
+				<ColorAdjust brightness="0.31" contrast="-0.09" hue="0.09" saturation="0.05" />
+			</effect>
+		</TableView>
+		<Label layoutX="14.0" layoutY="238.0" prefHeight="58.0" prefWidth="481.0" text="Dining Table Manager" textFill="#9e6464">
+			<font>
+				<Font name="Bauhaus 93" size="30.0" />
+			</font>
+		</Label>
+		<TextField fx:id="tableIdField" layoutX="372.0" layoutY="382.0" prefHeight="35.0" prefWidth="158.0" promptText="add table id" style="-fx-border-color: brown;" />
+		<TextField fx:id="capacityField" layoutX="554.0" layoutY="382.0" prefHeight="35.0" prefWidth="158.0" promptText="add Capacity" style="-fx-border-color: brown;" />
+		<Label layoutX="372.0" layoutY="345.0" prefHeight="35.0" prefWidth="135.0" text="Enter Table ID : " textFill="#804a4a">
+			<font>
+				<Font name="Times New Roman Bold" size="14.0" />
+			</font>
+		</Label>
+		<Label layoutX="554.0" layoutY="351.0" prefHeight="23.0" prefWidth="106.0" text="Enter Capacity :" textFill="#804a4a">
+			<font>
+				<Font name="Times New Roman Bold" size="14.0" />
+			</font>
+		</Label>
+		<ComboBox fx:id="branchComboBox" layoutX="726.0" layoutY="382.0" prefHeight="35.0" prefWidth="164.0" promptText="Branch ID" style="-fx-background-color: tan; -fx-border-color: brown;" />
+		<Label layoutX="726.0" layoutY="351.0" prefHeight="23.0" prefWidth="123.0" text="Choose Branch ID :" textFill="#804a4a">
+			<font>
+				<Font name="Times New Roman Bold" size="14.0" />
+			</font>
+		</Label>
+		<Button fx:id="insertButton" layoutX="475.0" layoutY="527.0" mnemonicParsing="false" onAction="#insertDiningTable" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Insert " textFill="#804a4a" />
+
+		<Button fx:id="deleteButton" layoutX="633.0" layoutY="527.0" mnemonicParsing="false" onAction="#deleteDiningTable" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Delete" textFill="#804a4a" />
+
+		<Button fx:id="searchButton" layoutX="633.0" layoutY="576.0" mnemonicParsing="false" onAction="#searchDiningTable" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Search" textFill="#804a4a" />
+
+		<Button fx:id="updateButton" layoutX="475.0" layoutY="576.0" mnemonicParsing="false" onAction="#updateDiningTable" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Update" textFill="#804a4a" />
+
+		<Button fx:id="viewButton" layoutX="475.0" layoutY="626.0" mnemonicParsing="false" onAction="#loadData" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="View" textFill="#804a4a" />
+
+		<Button fx:id="backButton" layoutX="633.0" layoutY="626.0" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="42.0" prefWidth="148.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Back" textFill="#804a4a" />
+      <Label layoutX="517.0" layoutY="479.0" prefHeight="42.0" prefWidth="481.0" text="Operationals" textFill="#9e6464">
+         <font>
+            <Font name="Bauhaus 93" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="293.0" fitWidth="914.0" layoutY="-40.0">
+         <image>
+            <Image url="@../../../Downloads/PizzaChef-360p-230630.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="AddNeewBranch" layoutX="726.0" layoutY="436.0" mnemonicParsing="false" onAction="#AddNewBranch" prefHeight="35.0" prefWidth="164.0" style="-fx-background-color: tan; -fx-border-color: brown;" text="Add New Branch ..." textFill="#804a4a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+
+
+	</children>
+</AnchorPane>

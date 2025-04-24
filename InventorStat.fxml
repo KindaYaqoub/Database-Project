@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application.InventoryStat" spacing="10" alignment="CENTER">
+    <!-- Label to display the title -->
+    <Label text="Menu Items Using More Than 1 Inventory Item" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    
+    <!-- PieChart for displaying the data -->
+    <PieChart fx:id="pieChart" />
+
+    <!-- VBox to hold the details (labels showing inventory count per item) -->
+    <VBox fx:id="detailsVBox" spacing="5" alignment="CENTER"/>
+</VBox>

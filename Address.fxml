@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddressController">
+	<right>
+		<AnchorPane prefHeight="729.0" prefWidth="828.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+			<children>
+				<TableView fx:id="addressTableView" layoutX="25.0" layoutY="321.0" prefHeight="393.0" prefWidth="286.0" style="-fx-background-color: #4BE0EF; -fx-border-color: #FB4326;">
+					<columns>
+						<TableColumn fx:id="addressIdColumn" text="Address ID" />
+						<TableColumn fx:id="streetColumn" text="Street" />
+						<TableColumn fx:id="cityColumn" text="City" />
+					</columns>
+				</TableView>
+
+				<Label layoutX="33.0" layoutY="24.0" textFill="#fb4326" />
+				<Label layoutX="33.0" layoutY="33.0" />
+				<Label layoutX="33.0" layoutY="33.0" />
+				<Label layoutX="33.0" layoutY="270.0" text="Address Manager" textFill="#fb4326">
+					<font>
+						<Font name="Bauhaus 93" size="32.0" />
+					</font>
+				</Label>
+				<Label layoutX="349.0" layoutY="322.0" text="Enter Address ID" textFill="#fb4326">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<TextField fx:id="addressIdField" layoutX="349.0" layoutY="351.0" prefHeight="26.0" prefWidth="130.0" promptText="Add Address ID" style="-fx-border-color: #FB4326;" />
+
+				<Label layoutX="642.0" layoutY="322.0" text="Enter Street" textFill="#fb4326">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<TextField fx:id="streetField" layoutX="642.0" layoutY="351.0" prefHeight="26.0" prefWidth="130.0" promptText="Add Street" style="-fx-border-color: #FB4326;" />
+
+				<Label layoutX="498.0" layoutY="322.0" text="Enter City" textFill="#fb4326">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<TextField fx:id="cityField" layoutX="498.0" layoutY="351.0" prefHeight="26.0" prefWidth="130.0" promptText="Add City" style="-fx-border-color: #FB4326;" />
+
+				<Label layoutX="494.0" layoutY="445.0" prefHeight="18.0" prefWidth="118.0" text="Operations " textFill="#fb4326">
+					<font>
+						<Font name="Bauhaus 93" size="21.0" />
+					</font>
+				</Label>
+				<Button layoutX="396.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleInsertButtonAction" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="Insert" />
+				<Button layoutX="506.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="Delete" />
+				<Button layoutX="609.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleSearchButtonAction" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="Search" />
+
+				<Button layoutX="396.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleUpdateButtonAction" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="Update" />
+				<Button layoutX="506.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleViewButtonAction" prefHeight="27.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="View" />
+
+				<Button layoutX="609.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="21.0" prefWidth="66.0" style="-fx-border-color: #FB4326; -fx-background-color: #4BE0EF;" text="Back" />
+
+				<ImageView fitHeight="286.0" fitWidth="828.0" layoutY="-19.0">
+					<image>
+						<Image url="@../../../../OneDrive/Desktop/database%20projpic/Folding%20Map%20Icon.gif" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+	</right>
+</BorderPane>
